@@ -1,0 +1,90 @@
+h1{
+    text-align: center;
+    font-size: 40px;
+    padding: 20;
+    color: #E9E9E9;
+    font-family: "Monospace", sans-serif;
+}
+
+caption{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2px;
+    font-size: 20px;
+    padding: 5px;
+    font-family: "Monospace", sans-serif;
+}
+
+div#grammar{
+    max-width: 100%;
+    margin: 5%;
+    line-height: 1.5;
+    vertical-align: middle;
+    text-align: center;
+    background-color : #f8f4f4;
+    color: #212121;
+    font-family: "Monospace", sans-serif;
+}
+
+body {
+    vertical-align: middle;
+    text-align: center;
+    background-color : #232323;
+    color: #E9E9E9;
+    font-family: "Monospace", sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.table-container {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+table#parser{
+    vertical-align: left;
+    text-align: center;
+    font-family: "Monospace", sans-serif;
+    border: solid white;
+    border-collapse: collapse;
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px; 
+}
+
+table#output{
+    vertical-align: right;
+    text-align: center;
+    font-family: "Monospace", sans-serif;
+    border: solid white;
+    border-collapse: collapse;
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px; 
+}
+
+th, td {
+    text-align: center;
+    padding: 7px;
+    border: 1px solid white;
+} 
+
+input{
+    margin: 1px;
+    width: 40%;
+    height: 40%;
+    padding: 1%;
+    font-family: "Monospace", sans-serif;
+}
+
+button{
+    margin: 5px;
+    width: 15%;
+    height: 10%;
+    padding: 5px;
+    font-family: "Monospace", sans-serif;
+}
