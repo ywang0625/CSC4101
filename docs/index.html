@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Shift Reduce Parser</title>
+    <link href="style.css" rel="stylesheet">
+
+    <h1>Shift Reduced Parser</h1>
+</head>
+
+<body>
+
+<div class="container">
+    <div id = "grammar">
+        <caption>Grammar</caption>
+        <p>
+            1. E → E + T <br>
+            2. E → T <br>
+            3. T → T * F <br>
+            4. T → F <br>
+            5. F → (E) <br>
+            6. F → id <br>
+        </p>
+    </div>
+
+<div class = "wrapper">
+    <div class="table-container">
+        <table border="1" id="parser">
+            <caption>Parser Table</caption>
+            <tr>
+                <th colspan="1"></th>
+                <th colspan="6" >Action</th>
+                <th colspan="3" >Goto</th>
+
+            </tr>
+            <tbody>
+            <tr>
+                <th>State</th>
+                <td>id</td>
+                <td>+</td>
+                <td>*</td>
+                <td>(</td>
+                <td>)</td>
+                <td>$</td>
+                <td>E</td>
+                <td>T</td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <th>0</th>
+                <td>S5</td>
+                <td></td>
+                <td></td>
+                <td>S4</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td></td>
+                <td>S6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>accept</td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th>2</th>
+                <td></td>
+                <td>R2</td>
+                <td>S7</td>
+                <td></td>
+                <td>R2</td>
+                <td>R2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th>3</th>
+                <td></td>
+                <td>R4</td>
+                <td>R4</td>
+                <td></td>
+                <td>R4</td>
+                <td>R4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>S5</td>
+                <td></td>
+                <td></td>
+                <td>S4</td>
+                <td></td>
+                <td></td>
+                <td>8</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td></td>
+                <td>R6</td>
+                <td>R6</td>
+                <td></td>
+                <td>R6</td>
+                <td>R6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td>S5</td>
+                <td></td>
+                <td></td>
+                <td>S4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>9</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td>S5</td>
+                <td></td>
+                <td></td>
+                <td>S4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td></td>
+                <td>S6</td>
+                <td></td>
+                <td></td>
+                <td>S11</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>9</th>
+                <td></td>
+                <td>R1</td>
+                <td>S7</td>
+                <td></td>
+                <td>R1</td>
+                <td>R1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>10</th>
+                <td></td>
+                <td>R3</td>
+                <td>R3</td>
+                <td></td>
+                <td>R3</td>
+                <td>R3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>11</th>
+                <td></td>
+                <td>R5</td>
+                <td>R5</td>
+                <td></td>
+                <td>R5</td>
+                <td>R5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-container">
+        <table id="output" style="width: 300px; height:20px">
+            <caption>Output</caption>
+        </table>
+    </div>
+</div>
+
+    <div>
+            <input id="expression" name="expression" placeholder="Enter an expression that ENDS WITH $" type="text"> <br>
+            <button id="execution" onclick="execution()">Show Next Step</button>
+    </div>
+
+
+
+</div>
+
+<p id="error-msg"></p>
+<p id = "finish-msg"></p>
+<script src="script.js"></script>
+
+</body>
+</html>
