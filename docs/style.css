@@ -9,24 +9,28 @@ h1{
 caption{
     font-weight: bold;
     text-align: center;
-    margin-top: 2px;
+    margin-top: auto;
     font-size: 20px;
     padding: 5px;
     font-family: "Monospace", sans-serif;
 }
 
-div#grammar{
-    max-width: 100%;
-    margin: 5%;
-    line-height: 1.5;
-    vertical-align: middle;
-    text-align: center;
-    background-color : #f8f4f4;
-    color: #212121;
+.container{
+    max-width: 45%; 
+    margin: 20px auto; /* Center horizontally and add margin */
+    padding: 20px; /* Add some padding */
+    font-size: 15px;
+    background-color: #E9E9E9;
+    color: #232323;
     font-family: "Monospace", sans-serif;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center;
 }
 
-body {
+
+body{
     vertical-align: middle;
     text-align: center;
     background-color : #232323;
@@ -86,5 +90,21 @@ button{
     width: 15%;
     height: 10%;
     padding: 5px;
+    font-family: "Monospace", sans-serif;
+}
+
+p#error-msg{
+    font-weight: bold;
+    font-size: 30px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "Monospace", sans-serif;
+}
+
+p#finish-msg{
+    font-weight: bold;
+    font-size: 30px;
+    vertical-align: middle;
+    text-align: center;
     font-family: "Monospace", sans-serif;
 }
