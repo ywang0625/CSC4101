@@ -49,7 +49,7 @@ body{
     text-align: center;
 }
 
-table#parser{
+table#parser-table{
     vertical-align: left;
     text-align: center;
     font-family: "Monospace", sans-serif;
@@ -99,6 +99,7 @@ p#error-msg{
     vertical-align: middle;
     text-align: center;
     font-family: "Monospace", sans-serif;
+    color: #6a3636;
 }
 
 p#finish-msg{

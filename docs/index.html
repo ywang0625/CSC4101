@@ -5,27 +5,32 @@
     <title>Shift Reduce Parser</title>
     <link href="style.css" rel="stylesheet">
 
-    <h1>Shift Reduced Parser</h1>
+    <h1>Shift Reduce Parser</h1>
 </head>
 
 <body>
 
 <div class="container">
-    <div id = "grammar">
+    <table class="container-grammar" id = "grammar">
         <caption>Grammar</caption>
-        <p>
-            1. E → E + T <br>
-            2. E → T <br>
-            3. T → T * F <br>
-            4. T → F <br>
-            5. F → (E) <br>
-            6. F → id <br>
-        </p>
+            <tr>
+                <td>
+                    <p>
+                        1. E → E + T <br>
+                        2. E → T <br>
+                        3. T → T * F <br>
+                        4. T → F <br>
+                        5. F → (E) <br>
+                        6. F → id <br>
+                    </p>
+                </td>
+            </tr>
+        </table>
     </div>
 
 <div class = "wrapper">
     <div class="table-container">
-        <table border="1" id="parser">
+        <table border="1" id="parser-table">
             <caption>Parser Table</caption>
             <tr>
                 <th colspan="1"></th>
@@ -214,6 +219,8 @@
 
 <p id="error-msg"></p>
 <p id = "finish-msg"></p>
+
+
 <script src="script.js"></script>
 
 </body>
